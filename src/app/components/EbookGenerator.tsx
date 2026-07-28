@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import GoogleAd from './GoogleAd';
 
 interface Chapter {
   chapterNumber: number;
@@ -233,7 +234,7 @@ export default function EbookGenerator() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
           <div>
             <h1 className="text-xl font-bold text-gray-900">AI 전자책 생성기</h1>
             <p className="text-xs text-gray-400 mt-0.5">Claude AI로 전문적인 전자책을 자동 생성합니다</p>
@@ -254,7 +255,7 @@ export default function EbookGenerator() {
 
       {/* Step Indicator */}
       <div className="bg-white border-b border-gray-100">
-        <div className="max-w-3xl mx-auto px-6 py-3 flex gap-2">
+        <div className="max-w-5xl mx-auto px-6 py-3 flex gap-2">
           {STEP_LABELS.map((label, i) => {
             const s = (i + 1) as Step;
             const isDone = step > s;
@@ -288,7 +289,8 @@ export default function EbookGenerator() {
         </div>
       </div>
 
-      <main className="max-w-3xl mx-auto px-6 py-8">
+      <div className="max-w-5xl mx-auto px-6 py-8 flex gap-8 items-start">
+        <main className="flex-1 min-w-0">
         {error && (
           <div className="mb-5 p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
             {error}
@@ -553,7 +555,26 @@ export default function EbookGenerator() {
             ))}
           </div>
         )}
-      </main>
+        </main>
+
+        {/* Sidebar Ad */}
+        <aside className="w-72 shrink-0 hidden xl:block">
+          <div className="sticky top-24">
+            <div className="bg-white rounded-xl border border-gray-200 p-3">
+              <p className="text-xs text-gray-400 text-center mb-2">광고</p>
+              <GoogleAd adSlot="YOUR_SIDEBAR_AD_SLOT_ID" style={{ minHeight: '600px' }} />
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      {/* Footer Ad */}
+      <footer className="bg-white border-t border-gray-200">
+        <div className="max-w-5xl mx-auto px-6 py-4">
+          <p className="text-xs text-gray-400 text-center mb-2">광고</p>
+          <GoogleAd adSlot="YOUR_FOOTER_AD_SLOT_ID" adFormat="horizontal" style={{ minHeight: '90px' }} />
+        </div>
+      </footer>
     </div>
   );
 }
