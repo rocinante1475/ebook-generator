@@ -562,7 +562,7 @@ export default function EbookGenerator() {
           <div className="sticky top-24">
             <div className="bg-white rounded-xl border border-gray-200 p-3">
               <p className="text-xs text-gray-400 text-center mb-2">광고</p>
-              <GoogleAd adSlot="YOUR_SIDEBAR_AD_SLOT_ID" style={{ minHeight: '600px' }} />
+              <GoogleAd adSlot="1303273100" style={{ minHeight: '600px' }} />
             </div>
           </div>
         </aside>
@@ -572,7 +572,7 @@ export default function EbookGenerator() {
       <footer className="bg-white border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-6 py-4">
           <p className="text-xs text-gray-400 text-center mb-2">광고</p>
-          <GoogleAd adSlot="YOUR_FOOTER_AD_SLOT_ID" adFormat="horizontal" style={{ minHeight: '90px' }} />
+          <GoogleAd adSlot="1303273100" adFormat="horizontal" style={{ minHeight: '90px' }} />
         </div>
       </footer>
     </div>
