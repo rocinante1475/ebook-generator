@@ -233,9 +233,22 @@ export default function EbookGenerator() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-3xl mx-auto px-6 py-4">
-          <h1 className="text-xl font-bold text-gray-900">AI 전자책 생성기</h1>
-          <p className="text-xs text-gray-400 mt-0.5">Claude AI로 전문적인 전자책을 자동 생성합니다</p>
+        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div>
+            <h1 className="text-xl font-bold text-gray-900">AI 전자책 생성기</h1>
+            <p className="text-xs text-gray-400 mt-0.5">Claude AI로 전문적인 전자책을 자동 생성합니다</p>
+          </div>
+          <a
+            href="https://ko-fi.com/rocinante1475"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-4 py-2 bg-[#FF5E5B] text-white text-sm font-medium rounded-lg hover:bg-[#e54e4b] transition-colors shrink-0"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+              <path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402C1 3.148 4.198 1 7.5 1c1.768 0 3.668.888 4.5 2.216C12.832 1.888 14.732 1 16.5 1 19.8 1 23 3.148 23 7.191c0 4.105-5.37 8.863-11 14.402z"/>
+            </svg>
+            후원하기
+          </a>
         </div>
       </header>
 
